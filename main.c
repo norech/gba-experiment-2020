@@ -15,7 +15,8 @@ void main(void)
 }
 
 
-void tick() {
+void tick(void)
+{
     update(&state, ticks);
 
     ticks += 1;

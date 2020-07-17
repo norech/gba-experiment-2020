@@ -1,23 +1,26 @@
 #include <gb/gb.h>
 #include "gamemanager.h"
 
+state_t state;
 uint8_t ticks = 0;
 
 void main(void)
 {
-    state_t state;
-
     start(&state);
 
-    while (1)
+    while (TRUE)
     {
-        update(&state, ticks);
-
-        ticks += 1;
-        if(ticks >= 255)
-            ticks = 0;
-
-        delay(1);
+        tick();
     }
 }
 
+
+void tick() {
+    update(&state, ticks);
+
+    ticks += 1;
+    if(ticks >= 255)
+        ticks = 0;
+
+    delay(1);
+}

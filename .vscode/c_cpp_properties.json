@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${env:GBDKDIR}/include/**"
+            ]
+        }
+    ],
+    "version": 4
+}

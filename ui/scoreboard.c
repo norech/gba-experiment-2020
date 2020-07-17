@@ -35,27 +35,31 @@ void update_scoreboard(state_t *state)
 
     uint8_t score = (*state).score;
 
-    if(score == old_score)
+    if (score == old_score)
         return;
 
     uint8_t i = old_score;
 
-    if(score < old_score) {
+    if (score < old_score)
+    {
         i = 0;
         first = 0;
         second = 0;
         third = 0;
     }
 
-    while(i < score) {
+    while (i < score)
+    {
         third++;
 
-        if(third > 9) {
+        if(third > 9)
+        {
             third = 0;
             second++;
         }
 
-        if(second > 9) {
+        if(second > 9)
+        {
             second = 0;
             first++;
         }

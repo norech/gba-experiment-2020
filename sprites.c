@@ -23,7 +23,8 @@ void clear_sprites(void)
 {
     unsigned char empty_array[];
 
-    for(uint8_t i = 0; i < sprites_count; i++) {
+    for(uint8_t i = 0; i < sprites_count; i++)
+    {
         move_sprite_out_of_bounds(i);
         set_sprite_tile(i, 0);
         set_sprite_data(i, 0, empty_array);

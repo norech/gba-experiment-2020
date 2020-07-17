@@ -8,12 +8,14 @@ void start(state_t *state)
     start_scoreboard(state);
 }
 
-void update(state_t *state)
+void update(state_t *state, uint8_t ticks)
 {
-    if(((*state).ticks % 16) == 0) {
+    if ((ticks % 16) == 0)
+    {
         (*state).score++;
 
-        if((*state).score > 255) {
+        if ((*state).score > 255)
+        {
             (*state).score = 0;
         }
     }

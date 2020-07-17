@@ -9,7 +9,7 @@ void set_digit_to_unknown(uint8_t sprite_id)
     set_sprite_tile(sprite_id, 12);
 }
 
-uint8_t add_digit_sprite()
+uint8_t add_digit_sprite(void)
 {
     uint8_t sprite_id = get_sprites_count();
     increment_sprites_count();
@@ -22,7 +22,8 @@ uint8_t add_digit_sprite()
 
 void set_digit(uint8_t sprite_id, uint8_t digit)
 {
-    if(digit > 9) {
+    if(digit > 9)
+    {
         set_digit_to_unknown(sprite_id);
         return;
     }
